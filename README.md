@@ -1,4 +1,4 @@
-# 🚀 ImpactoLocal
+# ImpactoLocal
 
 Plataforma aberta e *serverless* de triagem socioeconômica e gestão de filas de espera para cursinhos populares, mutirões de saúde e projetos sociais periféricos no Brasil.
 
