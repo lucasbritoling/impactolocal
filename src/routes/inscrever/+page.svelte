@@ -41,6 +41,19 @@
 						required
 						placeholder="Digite seu nome completo"
 						autocomplete="name"
+						pattern="^[A-Za-zÀ-ÖØ-öø-ÿ]+(?: [A-Za-zÀ-ÖØ-öø-ÿ]+)*$"
+						oninput={(e) => {
+							e.currentTarget.value = e.currentTarget.value.replace(/[0-9]/g, '');
+							// Substitui múltiplos espaços por um único espaço
+							e.currentTarget.value = e.currentTarget.value.replace(/\s{2,}/g, ' ');
+							// Impede que comece com espaço
+							if (e.currentTarget.value.startsWith(' '))
+								e.currentTarget.value = e.currentTarget.value.trimStart();
+						}}
+						onblur={(e) => {
+							// Remove espaços restantes nas pontas quando o usuário sai do campo
+							e.currentTarget.value = e.currentTarget.value.trim();
+						}}
 					/>
 				</div>
 
