@@ -6,10 +6,9 @@
     the Free Software Foundation, version 3 of the License.
   */
 
-	// Svelte 5: Utilização da Rune $props para capturar o formulário retornado pelo servidor
 	let { form } = $props();
 
-	// Svelte 5: Usando derivação reativa simples para ler os parâmetros da URL
+	const hoje = new Date().toLocaleDateString('en-CA');
 </script>
 
 <main class="container">
@@ -63,7 +62,15 @@
 
 				<div class="group">
 					<label for="data_nascimento">Data de Nascimento (Opcional)</label>
-					<input type="date" id="data_nascimento" name="data_nascimento" />
+					<input
+						type="date"
+						id="data_nascimento"
+						min="1900-01-01"
+						max={hoje}
+						required
+						autocomplete="bday"
+						name="data_nascimento"
+					/>
 				</div>
 
 				<fieldset class="socioeconomico">
