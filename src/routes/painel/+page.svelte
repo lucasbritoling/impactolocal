@@ -1,14 +1,12 @@
-<script>
-	/*
+<!--
     Copyright (C) 2026 Lucas Brito Ling / ImpactoLocal
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
     the Free Software Foundation, version 3 of the License.
-  */
+  -->
 
-	import { page } from '$app/stores';
+<script>
 
-	// Svelte 5: Capturando os dados reativos vindos do load do servidor
 	let { data, form } = $props();
 </script>
 
@@ -47,7 +45,7 @@
 						<td>{inscrito.nome}</td>
 						<td>
 							<a
-								href="https://wa.me{inscrito.telefone.replace(/\D/g, '')}"
+								href="https://wa.me/{inscrito.telefone.replace(/\D/g, '')}"
 								target="_blank"
 								class="link-whatsapp"
 							>
