@@ -8,9 +8,11 @@
 		"directory": ".svelte-kit/cloudflare",
 		"binding": "ASSETS"
 	},
+	"routes": [
+		{ "pattern": "impactolocal.coelo.dev", "custom_domain": true }
+	],
+	"workers_dev": false,
 	"vars": {
-		"//_copyright": "Copyright (C) 2026 Lucas Brito Ling / ImpactoLocal - AGPLv3",
-		"PUBLIC_SUPABASE_PUBLISHABLE_KEY": "sb_publishable_aIVWMNnHeyqb5Gt2eM9OpQ_PlRseIfr",
-    	"PUBLIC_SUPABASE_URL": "https://nxjtfchwgqqyxkvpowni.supabase.co"
+		"//_copyright": "Copyright (C) 2026 Lucas Brito Ling / ImpactoLocal - AGPLv3"
 	}
 }
